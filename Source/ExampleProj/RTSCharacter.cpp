@@ -19,7 +19,7 @@ ARTSCharacter::ARTSCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Set size for player capsule
-	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
+	//GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
 	// Don't rotate character to camera direction
 	bUseControllerRotationPitch = false;
@@ -27,11 +27,12 @@ ARTSCharacter::ARTSCharacter()
 	bUseControllerRotationRoll = false;
 
 	// Configure character movement
-	
+	/*
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Rotate character to moving direction
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 640.f, 0.f);
 	GetCharacterMovement()->bConstrainToPlane = true;
 	GetCharacterMovement()->bSnapToPlaneAtStart = true;
+	*/
 	
 
 	// Activate ticking in order to update the cursor every frame.
@@ -56,10 +57,12 @@ void ARTSCharacter::Tick(float DeltaTime)
 
 
 // Called to bind functionality to input
+/*
 void ARTSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
+*/
 
 

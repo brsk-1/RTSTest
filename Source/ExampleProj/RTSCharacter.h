@@ -7,7 +7,7 @@
 #include "RTSCharacter.generated.h"
 
 UCLASS()
-class EXAMPLEPROJ_API ARTSCharacter : public ACharacter
+class EXAMPLEPROJ_API ARTSCharacter : public APawn
 {
 	GENERATED_BODY()
 
@@ -22,9 +22,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+/*
 public:	
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	*/
 
 };
