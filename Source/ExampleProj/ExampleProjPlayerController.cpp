@@ -30,6 +30,7 @@ void AExampleProjPlayerController::BeginPlay()
 	}
 }
 
+
 void AExampleProjPlayerController::SetupInputComponent()
 {
 	// set up gameplay key bindings
@@ -94,15 +95,18 @@ void AExampleProjPlayerController::OnSetDestinationTriggered()
 
 void AExampleProjPlayerController::OnSetDestinationReleased()
 {
+	
 	// If it was a short press
 	if (FollowTime <= ShortPressThreshold)
 	{
 		// We move there and spawn some particles
 		//UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, CachedDestination);
+		MoveTo(CachedDestination);
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, FXCursor, CachedDestination, FRotator::ZeroRotator, FVector(1.f, 1.f, 1.f), true, true, ENCPoolMethod::None, true);
 	}
 
 	FollowTime = 0.f;
+	
 }
 
 // Triggered every frame when the input is held down
